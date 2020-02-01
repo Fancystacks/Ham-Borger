@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Fancystacks/Ham-Borger/issues"
   },
-  "homepage": "https://github.com/Fancystacks/Ham-Borger#readme"
+  "homepage": "https://github.com/Fancystacks/Ham-Borger#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
 }
