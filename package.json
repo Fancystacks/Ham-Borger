@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Fancystacks/Ham-Borger#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "mysql": "^2.18.1"
   }
 }
