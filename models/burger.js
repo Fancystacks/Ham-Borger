@@ -26,4 +26,4 @@ var burgers = {
 };
 
 // Export the database functions for the controller (burgers_llerontr.js).
-module.exports = burgey;
+module.exports = burgers;
