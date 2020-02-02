@@ -2,22 +2,15 @@
 
 <h2>Burgers that are NOT consumed</h2>
 
-<ul>
-  {{#each burger}}
-    {{#unless consumed}}
-      {{> burgers/cat-block consumed=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Burgers that are CONSUMED!</h2>
-
-<ul>
-  {{#each burger}}
-    {{#if consumed}}
-      {{> cats/cat-block consumed=false}}
-    {{/if}}
-  {{/each}}
+<<ul>
+    <div class="row">
+    {{#each burgers}}
+        <li>
+            <p>{{id}} {{burger}}</p>
+        </li>
+        <button data-id="{{id}}" class="delete-burger">Delete</button>
+    {{/each}}
+    </div>
 </ul>
 
 <h2>Add a Burger</h2>
@@ -30,7 +23,7 @@
 
   <div class="form-group">
     <label for="cons">Consumed?</label><br>
-    <input type="radio" name="consumed" value="1" checked> Consumed!!<br>
+    <input type="radio" name="consumed" value="1" checked> Burger is aquired!!<br>
     <input type="radio" name="consumed" value="0"> Available
   </div>
 

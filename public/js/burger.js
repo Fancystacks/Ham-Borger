@@ -38,7 +38,7 @@ $(function() {
     event.preventDefault();
 
     var newBurger = {
-      name: $("#hamburg").val().trim(),
+      burger_name: $("#hamburg").val().trim(),
       consume: $("[name=consumed]:checked").val().trim()
     };
 
@@ -49,6 +49,7 @@ $(function() {
     }).then(
       function() {
         console.log("created new burger");
+        $("#hamburg").val("");
         // Reload the page to get the updated list
         location.reload();
       }
