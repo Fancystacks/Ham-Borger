@@ -68,7 +68,7 @@ const orm = {
     queryString += " SET ";
     queryString += objToSql(objColVals);
     queryString += " WHERE ";
-    queryString += condition;
+    queryString += consumed;
 
     console.log(queryString);
     connection.query(queryString, function(err, result) {
@@ -91,6 +91,5 @@ const orm = {
     });
   }
 };
-
 
 module.exports = orm;

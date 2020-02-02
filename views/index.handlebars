@@ -1,12 +1,10 @@
-<h1>Burgers!</h1>
-
-<h2>Burgers that are NOT consumed</h2>
+<h1>Have a Burger.</h1>
 
 <<ul>
     <div class="row">
     {{#each burgers}}
         <li>
-            <p>{{id}} {{burger}}</p>
+            <p>{{id}} {{burger_name}}</p>
         </li>
         <button data-id="{{id}}" class="delete-burger">Delete</button>
     {{/each}}
