@@ -1,29 +1,54 @@
-<h1>Have a Burger.</h1>
+<div class="container">
 
-<<ul>
-    <div class="row">
-    {{#each burgers}}
-        <li>
-            <p>{{id}} {{burger_name}}</p>
-        </li>
-        <button data-id="{{id}}" class="delete-burger">Delete</button>
-    {{/each}}
+    <div class="jumbotron">
+        <h2 id="color-override">Create a Burger.</h2>
+        <p>Enjoy a burger.</p>
+        <br>
+        <panel>
+            <form class="create-form">
+                <div class="form-group">
+                    <label for="newburger" id="color-override">Add a New Burger:</label>
+                    <input type="text" id="newburger" name="burger">
+                    <button type="submit" class="btn btn-success" id="addburger"><span class="fa fa-thumbs-up"></span></button>
+                </div>
+            </form>
+        </panel>
     </div>
-</ul>
 
-<h2>Add a Burger</h2>
-<form class="create-form">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="lefthead"><strong>New Burgers</strong></div>
+                <div class="panel-body">
+                    <ul>
+                        {{#each burgers}}
+                            {{#unless consumed}}
+                                <span><strong> {{id}} - {{burger_name}} </strong></span>
+                                <button type="button" class="eatburger btn btn-warning" id ="eatbutton" data-id="{{id}}" data-newDevoured="{{consume}}"><span class="fa fa-cutlery"></span></button>
+                                <hr>
+                            {{/unless}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- consumed Burgers -->
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="righthead"><strong>Consumed Burgers</strong></div>
+                <div class="panel-body">
+                    <ul>
+                        {{#each burgers}}
+                            {{#if consumed}}
+                                <span><strong> {{id}} - {{burger_name}} </strong></span>
+                                <button type="button" class="trashburger btn btn-danger" id ="trashbutton" data-id="{{id}}" data-newDevoured="{{consume}}"><span class="fa fa-trash"></span></button>
+                                <hr>
+                            {{/if}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
-  <div class="form-group">
-    <label for="hamburg">Burger Name:</label>
-    <input type="text" id="hamburg" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="cons">Consumed?</label><br>
-    <input type="radio" name="consumed" value="1" checked> Burger is aquired!!<br>
-    <input type="radio" name="consumed" value="0"> Available
-  </div>
-
-  <button type="submit">Add Burger</button>
-</form>
+</div>

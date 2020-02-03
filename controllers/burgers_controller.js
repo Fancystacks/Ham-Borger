@@ -42,13 +42,14 @@ router.put("/api/burgers/:id", function (req, res) {
 });
 
 router.delete('/api/burgers/:id', function (req, res) {
-    const condition = `id = ${req.params.id}`;
+    var condition = `id = ${req.params.id}`;
     // .delete that takes in (condition, callback)
     burger.delete(condition, (results) => {
-        if (!res.affectedRows) {
+        if (res.affectedRows === 0) {
             return res.status(404).end();
+        } else {
+            res.status(200).end();
         }
-        res.status(200).end();
     });
 });
 
