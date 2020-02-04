@@ -1,34 +1,26 @@
-.todo-list {
-    margin: 0 auto;
-    margin-top: 75px;
-  }
-  
-  input.new-item:focus {
-    outline: none;
-  }
-  
-  .list-group-item > button.delete,
-  .list-group-item > button.complete {
-    float: right;
-    height: 25px;
-    margin-left: 5px;
-  }
-  
-  .edit {
-    width: 100%;
-  }
-  
-  body * {
+  body {
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: transparent;
+    background-image: url(https://user-images.githubusercontent.com/38336934/73702619-8a7c2d80-46aa-11ea-872e-89918b48cff8.jpg);
   }
 
   .container {
-    background-color: #3db85c;
-    background-image: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+    background-color: transparent;
   }
 
-  .jumbotron {
-      background-color: transparent;
+  .panel-body, .jumbotron {
+    padding: 15px;
+    box-shadow: 10px 10px 20px black;
+  }
+
+  #newburger {
+      padding: 5px;
+      margin-left: 3px;
+  }
+
+  .jumbo {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-size: 6rem;
+      letter-spacing: 1px;
   }
